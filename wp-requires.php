@@ -2,7 +2,7 @@
 /**
  * Plugin Name: What's running
  * Description: Lists WordPress require() calls mainly for plugin code refactoring
- * Version: 1.0
+ * Version: 1.1
  * Author: Viktor Szépe
  * Author URI: http://www.online1.hu/webdesign/
  * License: GNU General Public License (GPL) version 2
