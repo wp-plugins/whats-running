@@ -46,6 +46,10 @@ After finishing the refactor, please deactivate and delete this plugin.
 
 == Changelog ==
 
+= 1.2 =
+* legend for the colors
+* now you don't have to collapse the admin menu
+
 = 1.1 =
 * plugin name correction in the readme
 
