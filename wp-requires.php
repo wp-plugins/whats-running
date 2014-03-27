@@ -32,7 +32,7 @@ if (false === defined('ABSPATH')) {
 function whats_running() {
     $abslen = strlen(ABSPATH);
 
-    echo '<br style="clear:both;"/><hr/><br/><pre style="padding-left:36px;"><ol style="list-style-position:inside;">';
+    echo '<br style="clear:both;"/><hr/><br/><pre style="padding-left:160px;"><ol style="list-style-position:inside;">';
     foreach (get_included_files() as $i => $path) {
         $color = ' style="color:red;"';
         if (0 === strpos($path, WP_PLUGIN_DIR)) {
