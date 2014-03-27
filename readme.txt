@@ -4,7 +4,7 @@ Donate link: https://szepe.net/wp-donate/
 Tags: debug, debugging, developer, development, performance, profiler, profiling
 Requires at least: 3.5
 Tested up to: 3.8.1
-Stable tag: 1.1
+Stable tag: 1.2
 License: GPLv2
 
 Lists WordPress require() calls mainly for plugin code refactoring
@@ -17,6 +17,12 @@ This plugin dumps the colorized filenames after the normal WordPress output, aft
 This generates invalid HTML but gives you an overview of plugins and the current theme.
 
 It lists all files parsed and executed by the PHP engine. It can be used for plugin or theme refactoring.
+
+* files in the plugin directory are BLUE
+* files in the themes directory are ORANGE
+* files in the wp-includes directory are GREEN
+* files in the wp-admin directory are GREY
+* all other files are RED
 
 You can find some documentaion here what makes a WordPress plugin efficient.
 https://github.com/szepeviktor/WPHW
@@ -39,6 +45,9 @@ After finishing the refactor, please deactivate and delete this plugin.
 1. This is a screen shot of the dashboard. You can see the filenames after the admin footer.
 
 == Changelog ==
+
+= 1.1 =
+* plugin name correction in the readme
 
 = 1.0 =
 * Initial release
