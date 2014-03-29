@@ -1,6 +1,7 @@
 <?php
 /**
  * Plugin Name: What's running
+ * Plugin URI: http://wordpress.org/plugins/whats-running/
  * Description: Lists WordPress require() calls mainly for plugin code refactoring
  * Version: 1.3
  * Author: Viktor Szépe
