@@ -2,7 +2,7 @@
 /**
  * Plugin Name: What's running
  * Description: Lists WordPress require() calls mainly for plugin code refactoring
- * Version: 1.2
+ * Version: 1.3
  * Author: Viktor Szépe
  * Author URI: http://www.online1.hu/webdesign/
  * License: GNU General Public License (GPL) version 2
@@ -30,6 +30,12 @@ if (false === defined('ABSPATH')) {
 
 
 function whats_running() {
+    // on file uploads (async-upload.php) DOING_AJAX is defined late
+    if ((defined('DOING_AJAX') && DOING_AJAX) ||
+        (defined('DOING_CRON') && DOING_CRON)) {
+        return;
+    }
+
     $abslen = strlen(ABSPATH);
 
     echo '<br style="clear:both;"/><hr/><br/><pre style="padding-left:160px;"><ol style="list-style-position:inside;">';
@@ -54,7 +60,4 @@ function whats_running() {
     echo '</ol></pre>';
 }
 
-if ((false === defined('DOING_AJAX') || ! DOING_AJAX) &&
-    (false === defined('DOING_CRON') || ! DOING_CRON)) {
-    add_action('shutdown', 'whats_running');
-}
+add_action('shutdown', 'whats_running');
