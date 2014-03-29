@@ -4,7 +4,7 @@ Donate link: https://szepe.net/wp-donate/
 Tags: debug, debugging, developer, development, performance, profiler, profiling
 Requires at least: 3.5
 Tested up to: 3.8.1
-Stable tag: 1.2
+Stable tag: 1.3
 License: GPLv2
 
 Lists WordPress require() calls mainly for plugin code refactoring
@@ -45,6 +45,13 @@ After finishing the refactor, please deactivate and delete this plugin.
 1. This is a screen shot of the dashboard. You can see the filenames after the admin footer.
 
 == Changelog ==
+
+= 1.3 =
+* FIX: on file uploads (async-upload.php) DOING_AJAX is defined late
+
+= 1.2 =
+* NEW: legend for the colors
+* now you don't have to collapse the admin menu
 
 = 1.1 =
 * plugin name correction in the readme
