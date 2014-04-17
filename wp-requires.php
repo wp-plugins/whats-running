@@ -36,6 +36,7 @@ function whats_running() {
         (defined('DOING_CRON') && DOING_CRON)) {
         return;
     }
+    // run on IFRAME_REQUEST
 
     $abslen = strlen(ABSPATH);
 

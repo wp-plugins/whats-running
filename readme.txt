@@ -3,7 +3,7 @@ Contributors: szepeviktor
 Donate link: https://szepe.net/wp-donate/
 Tags: debug, debugging, developer, development, performance, profiler, profiling
 Requires at least: 3.5
-Tested up to: 3.8.1
+Tested up to: 3.9
 Stable tag: 1.3
 License: GPLv2
 
