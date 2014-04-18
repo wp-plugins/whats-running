@@ -1,8 +1,9 @@
 <?php
 /**
  * Plugin Name: What's running
+ * Plugin URI: http://wordpress.org/plugins/whats-running/
  * Description: Lists WordPress require() calls mainly for plugin code refactoring
- * Version: 1.2
+ * Version: 1.4
  * Author: Viktor Szépe
  * Author URI: http://www.online1.hu/webdesign/
  * License: GNU General Public License (GPL) version 2
@@ -30,9 +31,17 @@ if (false === defined('ABSPATH')) {
 
 
 function whats_running() {
+    // on file uploads (async-upload.php) DOING_AJAX is defined late
+    if ((defined('DOING_AJAX') && DOING_AJAX) ||
+        (defined('DOING_CRON') && DOING_CRON) ||
+        (@$_SERVER['SCRIPT_FILENAME'] === ABSPATH . 'wp-admin/async-upload.php')) {
+        return;
+    }
+    // run on IFRAME_REQUEST
+
     $abslen = strlen(ABSPATH);
 
-    echo '<br style="clear:both;"/><hr/><br/><pre style="padding-left:36px;"><ol style="list-style-position:inside;">';
+    echo '<br style="clear:both;"/><hr/><br/><pre style="padding-left:160px;"><ol style="list-style-position:inside;">';
     foreach (get_included_files() as $i => $path) {
         $color = ' style="color:red;"';
         if (0 === strpos($path, WP_PLUGIN_DIR)) {
@@ -54,7 +63,4 @@ function whats_running() {
     echo '</ol></pre>';
 }
 
-if ((false === defined('DOING_AJAX') || ! DOING_AJAX) &&
-    (false === defined('DOING_CRON') || ! DOING_CRON)) {
-    add_action('shutdown', 'whats_running');
-}
+add_action('shutdown', 'whats_running');
