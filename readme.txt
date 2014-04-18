@@ -46,6 +46,10 @@ After finishing the refactor, please deactivate and delete this plugin.
 
 == Changelog ==
 
+= 1.4 =
+* FIX: don't run on non-AJAX media uploads (async-upload.php)
+* tested up to WordPress 3.9
+
 = 1.3 =
 * FIX: on file uploads (async-upload.php) DOING_AJAX is defined late
 

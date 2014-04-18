@@ -3,7 +3,7 @@
  * Plugin Name: What's running
  * Plugin URI: http://wordpress.org/plugins/whats-running/
  * Description: Lists WordPress require() calls mainly for plugin code refactoring
- * Version: 1.3
+ * Version: 1.4
  * Author: Viktor Szépe
  * Author URI: http://www.online1.hu/webdesign/
  * License: GNU General Public License (GPL) version 2
@@ -33,7 +33,8 @@ if (false === defined('ABSPATH')) {
 function whats_running() {
     // on file uploads (async-upload.php) DOING_AJAX is defined late
     if ((defined('DOING_AJAX') && DOING_AJAX) ||
-        (defined('DOING_CRON') && DOING_CRON)) {
+        (defined('DOING_CRON') && DOING_CRON) ||
+        (@$_SERVER['SCRIPT_FILENAME'] === ABSPATH . 'wp-admin/async-upload.php')) {
         return;
     }
     // run on IFRAME_REQUEST
