@@ -3,8 +3,8 @@ Contributors: szepeviktor
 Donate link: https://szepe.net/wp-donate/
 Tags: debug, debugging, developer, development, performance, profiler, profiling
 Requires at least: 3.5
-Tested up to: 3.9
-Stable tag: 1.4
+Tested up to: 3.9.1
+Stable tag: 1.5
 License: GPLv2
 
 Lists WordPress require() calls mainly for plugin code refactoring
@@ -23,6 +23,8 @@ It lists all files parsed and executed by the PHP engine. It can be used for plu
 * files in the wp-includes directory are GREEN
 * files in the wp-admin directory are GREY
 * all other files are RED
+
+Please watch [this WP core bug](https://core.trac.wordpress.org/ticket/28364) to get more information about WordPress entry points.
 
 You can find some documentaion here what makes a WordPress plugin efficient.
 https://github.com/szepeviktor/WPHW
@@ -45,6 +47,10 @@ After finishing the refactor, please deactivate and delete this plugin.
 1. This is a screen shot of the dashboard. You can see the filenames after the admin footer.
 
 == Changelog ==
+
+= 1.5 =
+* Added inline styles
+* Link to WP core bug to watch
 
 = 1.4 =
 * FIX: don't run on non-AJAX media uploads (async-upload.php)
