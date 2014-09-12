@@ -3,7 +3,7 @@ Contributors: szepeviktor
 Donate link: https://szepe.net/wp-donate/
 Tags: debug, debugging, developer, development, performance, profiler, profiling
 Requires at least: 3.5
-Tested up to: 4.0
+Tested up to: 3.9.2
 Stable tag: 1.7
 License: GPLv2
 
@@ -49,7 +49,7 @@ After finishing the refactor, please deactivate and delete this plugin.
 == Screenshots ==
 
 1. This is an old screen shot. You can see the filenames after the admin footer.
-2. This is the current screen shot of the plugin's output on the dashboard. The colored bars represent the file sizes.
+1. This is the current screen shot of the plugin's output on the dashboard. The colored bars represent the file sizes.
 
 == Changelog ==
 
